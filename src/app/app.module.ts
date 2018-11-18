@@ -5,11 +5,18 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ContainerComponent } from './container/container.component';
+import { HeadersComponent } from './headers/headers.component';
+import { TableComponent } from './table/table.component';
+import { RowComponent } from './row/row.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContainerComponent
+    ContainerComponent,
+    HeadersComponent,
+    TableComponent,
+    RowComponent,
   ],
   imports: [
     BrowserModule,
