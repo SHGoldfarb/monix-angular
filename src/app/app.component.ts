@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import rates from './dummy-rates';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Monix';
+  leftRate;
+  rightRate;
+  rates;
+  ngOnInit() {
+    this.rates = rates;
+    this.leftRate = 'USD';
+    this.rightRate = 'CLP';
+  }
 }
