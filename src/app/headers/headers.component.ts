@@ -10,12 +10,24 @@ export class HeadersComponent implements OnInit {
   @Input() rightRate: String;
   @Input() onRightChange: Function;
   @Input() onLeftChange: Function;
+  @Input() rates: object;
 
+  get rateNames() {
+    return Object.keys(this.rates);
+  }
 
   onSwapClick() {
     const { leftRate, rightRate } = this;
     this.onRightChange(leftRate);
     this.onLeftChange(rightRate);
+  }
+
+  onLeftSelect(rate) {
+    this.onLeftChange(rate);
+  }
+
+  onRightSelect(rate) {
+    this.onRightChange(rate);
   }
 
   constructor() { }

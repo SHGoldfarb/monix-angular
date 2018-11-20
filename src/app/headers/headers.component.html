@@ -1,5 +1,13 @@
 <div class="headersContainer">
-  <div class="left column">{{leftRate}}</div>
+  <div class="left column">
+    <select [value]="leftRate" (change)="onLeftSelect($event.target.value)">
+      <option *ngFor="let rate of rateNames" [value]="rate" [disabled]="rate === rightRate">{{rate}}</option>
+    </select>
+  </div>
   <div class="button" (click)="onSwapClick()">SWAP</div>
-  <div class="right column">{{rightRate}}</div>
+  <div class="right column">
+    <select [value]="rightRate" (change)="onRightSelect($event.target.value)">
+      <option *ngFor="let rate of rateNames" [value]="rate" [disabled]="rate === leftRate">{{rate}}</option>
+    </select>
+  </div>
 </div>
