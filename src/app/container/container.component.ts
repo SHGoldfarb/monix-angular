@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChange } from '@angular/core';
 
 @Component({
   selector: 'app-container',
@@ -10,15 +10,17 @@ export class ContainerComponent implements OnInit {
   @Input() leftRate: string;
   @Input() rightRate: string;
   @Input() multiplier: number;
-
-  get rightBase(): number {
-    const { rates, leftRate, rightRate } = this;
-    return rates[rightRate] / rates[leftRate];
-  }
+  @Input() callbacks: object;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  get rightBase() {
+    const { leftRate, rightRate, rates } = this;
+    return rates[rightRate] / rates[leftRate];
+  }
+
 
 }

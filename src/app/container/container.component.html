@@ -1,4 +1,5 @@
 <div class="container">
-  <app-headers [leftRate]="leftRate" [rightRate]="rightRate"></app-headers>
+  <app-headers [leftRate]="leftRate" [rightRate]="rightRate" [onRightChange]="callbacks.onRightChange"
+    [onLeftChange]="callbacks.onLeftChange"></app-headers>
   <app-table [multiplier]="multiplier" [rightBase]="rightBase"></app-table>
 </div>

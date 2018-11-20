@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 0px 5px;
+}
+
+.left {
+    text-align: end;
+}

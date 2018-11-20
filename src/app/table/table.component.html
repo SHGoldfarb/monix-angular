@@ -1,4 +1,12 @@
-<div>
-  <app-row *ngFor="let index of indexes" [level]="multiplier * index" [rightBase]="rightBase">
-  </app-row>
-</div>
+<app-row *ngFor="let index of openedIndexes" [level]="multiplier * index"
+    [rightBase]="rightBase" (click)="onRowClick(index)" class="primary">
+</app-row>
+<app-row *ngIf="opened" [level]="multiplier * opened" [rightBase]="rightBase"
+    (click)="onRowClick(index)" class="primary">
+</app-row>
+<app-row *ngFor="let index of closedIndexes" [level]="multiplier * (index + opened)"
+    [rightBase]="rightBase" (click)="onRowClick(index)" class="primary">
+</app-row>
+<app-row *ngIf="opened" [level]="multiplier * (opened + 1)" [rightBase]="rightBase"
+    (click)="onRowClick(index)" class="primary">
+</app-row>

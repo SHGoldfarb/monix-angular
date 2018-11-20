@@ -1,0 +1,16 @@
+.headersContainer {
+    display: flex;
+}
+
+.column {
+    flex: 4;
+    padding: 0px 5px;
+}
+
+.left {
+    text-align: end;
+}
+
+.button {
+    flex: 1;
+}
