@@ -7,13 +7,15 @@ import rates from './dummy-rates';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Monix';
+  title: string = 'Monix';
   leftRate;
   rightRate;
   rates;
+  multiplier;
   ngOnInit() {
     this.rates = rates;
     this.leftRate = 'USD';
     this.rightRate = 'CLP';
+    this.multiplier = 10;
   }
 }

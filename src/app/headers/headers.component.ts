@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-headers',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./headers.component.css']
 })
 export class HeadersComponent implements OnInit {
+  @Input() leftRate: String;
+  @Input() rightRate: String;
 
   constructor() { }
 

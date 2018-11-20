@@ -1,5 +1,4 @@
-<p>
-  container works! {{leftRate}} {{rightRate}} {{rates[rightRate]}}
-  <app-headers></app-headers>
-  <app-table></app-table>
-</p>
+<div class="container">
+  <app-headers [leftRate]="leftRate" [rightRate]="rightRate"></app-headers>
+  <app-table [multiplier]="multiplier" [rightBase]="rightBase"></app-table>
+</div>

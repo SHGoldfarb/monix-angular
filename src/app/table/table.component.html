@@ -1,4 +1,4 @@
-<p>
-  table works!
-  <app-row></app-row>
-</p>
+<div>
+  <app-row *ngFor="let index of indexes" [level]="multiplier * index" [rightBase]="rightBase">
+  </app-row>
+</div>

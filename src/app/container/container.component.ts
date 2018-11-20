@@ -6,9 +6,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit {
-  @Input() rates: Array<Number>;
-  @Input() leftRate: String;
-  @Input() rightRate: String;
+  @Input() rates: Array<number>;
+  @Input() leftRate: string;
+  @Input() rightRate: string;
+  @Input() multiplier: number;
+
+  get rightBase(): number {
+    const { rates, leftRate, rightRate } = this;
+    return rates[rightRate] / rates[leftRate];
+  }
 
   constructor() { }
 
