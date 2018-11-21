@@ -1,17 +1,29 @@
-.headersContainer {
+:host {
     display: flex;
+    background-color: var(--color-head-2);
+    color: var(--color-head-1);
+    align-items: center;
 }
 
 .column {
     flex: 2;
     padding: 0px 5px;
-}
-
-.left {
-    text-align: end;
+    text-align: center;
 }
 
 .button {
     flex: 1;
     text-align: center;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border-width: 0px;
+    background-color: transparent;
+    text-align: center;
+    color: var(--color-head-1);
 }

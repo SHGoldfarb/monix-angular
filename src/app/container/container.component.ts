@@ -10,7 +10,11 @@ export class ContainerComponent implements OnInit {
   @Input() leftRate: string;
   @Input() rightRate: string;
   @Input() multiplier: number;
-  @Input() callbacks: object;
+  @Input() callbacks: {
+    onMultiplierChange: Function,
+    onRightChange: Function,
+    onLeftChange: Function
+  };
 
   constructor() { }
 
@@ -20,6 +24,14 @@ export class ContainerComponent implements OnInit {
   get rightBase() {
     const { leftRate, rightRate, rates } = this;
     return rates[rightRate] / rates[leftRate];
+  }
+
+  onSwipeLeft() {
+    this.callbacks.onMultiplierChange(this.multiplier * 10)
+  }
+
+  onSwipeRight() {
+    this.callbacks.onMultiplierChange(this.multiplier / 10)
   }
 
 

@@ -5,7 +5,7 @@
     (click)="onRowClick(index)" class="primary">
 </app-row>
 <app-row *ngFor="let index of closedIndexes" [level]="multiplier * (index + opened)"
-    [rightBase]="rightBase" (click)="onRowClick(index)" class="primary">
+    [rightBase]="rightBase" (click)="onRowClick(index)" class="secondary">
 </app-row>
 <app-row *ngIf="opened" [level]="multiplier * (opened + 1)" [rightBase]="rightBase"
     (click)="onRowClick(index)" class="primary">

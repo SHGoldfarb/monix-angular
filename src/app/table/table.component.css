@@ -3,6 +3,14 @@
     flex-direction: column;
 }
 
-app-row {
-    flex: 1;
+.primary {
+    color: var(--color-main-1);
+    background-color: var(--color-main-2);
+    flex: 9;
+}
+
+.secondary {    
+    color: var(--color-sec-1);
+    background-color: var(--color-sec-2);
+    flex: 7;
 }

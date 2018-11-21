@@ -1,8 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    --color-1: rgba(5, 102, 141, 1);
+    --color-2: rgba(2, 128, 144, 1);
+    --color-3: rgba(0, 168, 150, 1);
+    --color-4: rgba(2, 195, 154, 1);
+    --color-5: rgba(240, 243, 189, 1);
+    --color-7: #EEE;
+    --color-8: #222;
+
+    --color-11: rgba(34, 34, 59, 1); /* #22223b */
+    --color-12: rgba(74, 78, 105, 1); /* #4a4e69 */
+    --color-13: rgba(154, 140, 152, 1);
+    --color-14: rgba(201, 173, 167, 1);
+    --color-15: rgba(242, 233, 228, 1); /* #f2e9e4 */
+
+    --color-head-1: var(--color-11);
+    --color-head-2: var(--color-15);
+    --color-head-3: var(--color-2);
+
+    --color-main-1: var(--color-15);
+    --color-main-2: var(--color-11);
+    --color-main-3: var(--color-5);
+
+    --color-sec-1: var(--color-15);
+    --color-sec-2: var(--color-12);
+    --color-sec-3: var(--color-3);
+}
+
 html, body {
     margin: 0px;
     height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
 }
 
 .rootContainer {

@@ -1,5 +1,6 @@
 <div class="container">
   <app-headers [leftRate]="leftRate" [rightRate]="rightRate" [onRightChange]="callbacks.onRightChange"
     [onLeftChange]="callbacks.onLeftChange" [rates]="rates"></app-headers>
-  <app-table [multiplier]="multiplier" [rightBase]="rightBase"></app-table>
+  <app-table (swipeleft)="onSwipeLeft()" (swiperight)="onSwipeRight()"
+    [multiplier]="multiplier" [rightBase]="rightBase"></app-table>
 </div>

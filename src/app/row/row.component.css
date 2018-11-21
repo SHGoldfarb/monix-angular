@@ -5,8 +5,11 @@
 .column {
     flex: 1;
     padding: 0px 5px;
+    display: flex;
+    align-items: center;
 }
 
 .left {
     text-align: end;
+    flex-flow: row-reverse;
 }
